@@ -1,0 +1,13 @@
+version: '3.10'
+
+services:
+  demo-rabbitmq-broker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rabbitmqa
+    environment:
+      - RABBITMQ_CONFIG_FILE=/etc/rabbitmq/rabbitmq.conf
+    ports:
+      - 15672:15672
+      - 5672:5672

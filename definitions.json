@@ -1,0 +1,36 @@
+{
+	"vhosts": [
+		{
+			"name":"/dev"
+		}
+	],
+	"users": [
+		{
+			"name": "gyanda",
+			"password": "gyanda",
+			"tags": "administrator"
+		}
+	],
+	"queues": [
+		{
+			"name": "demo-queue",
+			"vhost": "/dev",
+			"durable": true,
+			"auto_delete": false,
+			"arguments": {}
+		}
+	],
+	"exchanges": [
+	],
+	"bindings": [
+		{
+			"source": "amq.direct",
+			"vhost": "/dev",
+			"destination": "demo-queue",
+			"destination_type": "queue",
+			"routing_key": "demo-queue",
+			"arguments": {}
+		}
+	]
+
+}
