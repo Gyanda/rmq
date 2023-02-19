@@ -1,2 +1,2 @@
 # rmq
-RMQ docker image with rabbitmq.conf file
+RMQ dockerfile to build RMQ image with rabbitmq.conf file
